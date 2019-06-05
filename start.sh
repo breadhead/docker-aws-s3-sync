@@ -8,9 +8,9 @@ export AWS_DEFAULT_REGION=$REGION
 
 if [[ "$1" == 'now' ]]; then
     exec /sync.sh
-else if [[ "$1" == 'backward-now' ]]; then
+elif [[ "$1" == 'backward-now' ]]; then
     exec /sync_backward.sh
-else if [[ "$1" == 'backward' ]]; then
+elif [[ "$1" == 'backward' ]]; then
     echo "$CRON_SCHEDULE /_backward.sh" >> /var/spool/cron/crontabs/rootexec
     crond -l 2 -f
 else
