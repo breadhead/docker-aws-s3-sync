@@ -7,9 +7,7 @@ RUN apk --no-cache add \
       pip \
       awscli
 
-ENV KEY=,SECRET=,REGION=,BUCKET=,BUCKET_PATH=/,CRON_SCHEDULE="0 1 * * *",PARAMS=
-
-VOLUME ["/data"]
+ENV KEY=,SECRET=,REGION=,BUCKET=,BUCKET_PATH=/,DATA_PATH=,CRON_SCHEDULE="0 1 * * *",PARAMS=
 
 ADD *.sh /
 RUN chmod +x /*.sh
