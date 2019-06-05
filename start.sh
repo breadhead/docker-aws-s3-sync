@@ -11,9 +11,9 @@ if [[ "$1" == 'now' ]]; then
 elif [[ "$1" == 'backward-now' ]]; then
     exec /sync_backward.sh
 elif [[ "$1" == 'backward' ]]; then
-    echo "$CRON_SCHEDULE /_backward.sh" >> /var/spool/cron/crontabs/rootexec
+    echo "$CRON_SCHEDULE /sync_backward.sh" >> /var/spool/cron/crontabs/root
     crond -l 2 -f
 else
-	echo "$CRON_SCHEDULE /sync.sh" >> /var/spool/cron/crontabs/root
+    echo "$CRON_SCHEDULE /sync.sh" >> /var/spool/cron/crontabs/root
     crond -l 2 -f
 fi
