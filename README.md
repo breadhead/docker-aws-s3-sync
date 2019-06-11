@@ -8,7 +8,7 @@ Docker container that periodically syncs afolder to Amazon S3 or backward using 
 
 ## Usage
 
-    docker run -d [OPTIONS] futurevision/aws-s3-sync
+    docker run -d [OPTIONS] breadheadhub/docker-aws-s3-sync
 
 
 ### Required Parameters:
