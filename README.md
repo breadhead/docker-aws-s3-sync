@@ -49,7 +49,7 @@ Sync just once (container is deleted afterwards):
 		-e REGION=region \
         -e BUCKET=mybucket \
         -v /home/user/data:/data:ro \
-        futurevision/aws-s3-sync now
+        breadheadhub/docker-aws-s3-sync now
 	
 Sync backward (from Amazon to local folder) every hour with cron schedule (container keeps running):
 
@@ -61,7 +61,7 @@ Sync backward (from Amazon to local folder) every hour with cron schedule (conta
         -e CRON_SCHEDULE="0 * * * *" \
 		-e BUCKET_PATH=/path \
         -v /home/user/data:/data:ro \
-        futurevision/aws-s3-sync backward
+        breadheadhub/docker-aws-s3-sync backward
 	
 Sync backward (from Amazon to local folder) just once (container is deleted afterwards):
 
@@ -71,7 +71,7 @@ Sync backward (from Amazon to local folder) just once (container is deleted afte
 		-e REGION=region \
         -e BUCKET=mybucket \
         -v /home/user/data:/data:ro \
-        futurevision/aws-s3-sync backward-now
+        breadheadhub/docker-aws-s3-sync backward-now
 	
 ## Credits
 
